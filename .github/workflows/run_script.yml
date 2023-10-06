@@ -1,0 +1,19 @@
+name: Run PowerShell Script
+
+on:
+  push:
+    branches:
+      - main  # Replace with your branch name
+
+jobs:
+  run_script:
+    runs-on: Windows-latest  # Use the appropriate runner for your needs
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Run PowerShell Script
+      shell: pwsh  # Use pwsh for PowerShell
+      run: |
+        ./GetUserName.ps1
