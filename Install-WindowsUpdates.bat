@@ -1,1 +1,1 @@
-%WINDIR%\ABC-Update.exe /S:WSUS /A:Install /R:3
+%WINDIR%\ABC-Update.exe /S:WSUS /A:Install /R:N
