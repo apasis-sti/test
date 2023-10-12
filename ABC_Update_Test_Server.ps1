@@ -12,7 +12,7 @@ $scriptBlock = {ABC-Update.exe /S:WSUS /A:Install /R:N}
 
 # Loop through each computer and execute the command
 foreach ($computer in $computers) {
-    Write-Output "Processing $computer
-    Invoke-Expression -Command ("winrs -r:" + $computer + " " + $scriptBlock)
-
-}
+    Write-Output "Processing $computer"
+    Enter-PSSession -ComputerName $computer
+    C:\Windows\ABC-Update.exe /S:WSUS /A:Install /R:N
+    }
